@@ -1,0 +1,43 @@
+.kasa-banner{
+    position: absolute;
+width: 1240px;
+height: 223px;
+left: -10px;
+top: 161px;
+}
+
+.kasa-bg{
+    position: absolute;
+    width: 1240px;
+    height: 223px;
+background: #000000;
+mix-blend-mode: darken;
+opacity: 0.3;
+border-radius: 25px;
+}
+
+.kasa-slogan{
+    position: absolute;
+left: 25.9%;
+right: 25.14%;
+top: 46.32%;
+bottom: 69.04%;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 48px;
+line-height: 142.6%;
+/* or 68px */
+
+display: flex;
+align-items: flex-end;
+
+color: #FFFFFF;
+}
+
+.kasa-img{
+    width: 1240px;
+    height: 223px;
+    border-radius: 25px;
+}
