@@ -1,11 +1,3 @@
-body {
-  position: absolute;
-  width: 1240px;
-  height: 1095px;
-  left: 100px;
-  top: 171px;
-}
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
