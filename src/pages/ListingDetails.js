@@ -1,9 +1,10 @@
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import Accordeon from '../components/Accordeon'
+import Carousel from '../components/Carrousel'
 import { useParams, Navigate } from 'react-router-dom'
 import data from '../datas/listings.json'
 import React, { useEffect, useState } from 'react'
+import Dropdown from '../components/Dropdown'
 
 function ListingDetails() {
   const { id } = useParams()
@@ -26,9 +27,16 @@ function ListingDetails() {
     return null
   }
 
+  const pictures = listing.pictures.map((picture, index) => (
+    <img src={picture} alt="" key={index} />
+  ))
+
   return (
     <div className="listingform-container">
       <Header />
+      <section className="carousel-section">
+        <Carousel>{pictures}</Carousel>
+      </section>
       <section>
         <div className="listing-content">
           <h1 className="listing-title"> {listing.title}</h1>
@@ -41,14 +49,14 @@ function ListingDetails() {
         <div className="tags">{listing.tags}</div>
       </section>
       <section className="dropdown-section">
-        <Accordeon text="Description">{listing.description}</Accordeon>
-        <Accordeon text="Équipements">
+        <Dropdown text="Description">{listing.description}</Dropdown>
+        <Dropdown text="Équipements">
           <ul>
             {listing.equipments.map((equipment, index) => (
               <li key={index}>{equipment}</li>
             ))}
           </ul>
-        </Accordeon>
+        </Dropdown>
       </section>
       <Footer />
     </div>

@@ -1,6 +1,6 @@
 import React from "react";
 
-function Accordeon (props){
+function Dropdown (props){
     return (
         <details className="dropdown">
         <summary>{props.text}</summary>
@@ -11,5 +11,5 @@ function Accordeon (props){
     )
 }
 
-export default Accordeon
+export default Dropdown
 
