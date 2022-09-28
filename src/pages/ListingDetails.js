@@ -5,6 +5,7 @@ import { useParams, Navigate } from 'react-router-dom'
 import data from '../datas/listings.json'
 import React, { useEffect, useState } from 'react'
 import Dropdown from '../components/Dropdown'
+import Star from '../components/Rate'
 
 function ListingDetails() {
   const { id } = useParams()
@@ -49,7 +50,13 @@ function ListingDetails() {
         </div>
         <div className="tags">{listing.tags}</div>
       </section>
-      <section className="ratings"></section>
+      <section className="ratings">
+        <span>
+          {[1, 2, 3, 4, 5].map((value) => (
+            <Star key={value} filled={value <= listing.rating} />
+          ))}
+        </span>
+      </section>
       <section className="dropdown-section">
         <Dropdown text="Description">{listing.description}</Dropdown>
         <Dropdown text="Équipements">
