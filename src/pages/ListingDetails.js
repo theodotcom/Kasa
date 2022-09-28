@@ -26,6 +26,7 @@ function ListingDetails() {
   if (listing === null) {
     return null
   }
+  console.log(listing.rating)
 
   const pictures = listing.pictures.map((picture, index) => (
     <img src={picture} alt="" key={index} />
@@ -48,6 +49,7 @@ function ListingDetails() {
         </div>
         <div className="tags">{listing.tags}</div>
       </section>
+      <section className="ratings"></section>
       <section className="dropdown-section">
         <Dropdown text="Description">{listing.description}</Dropdown>
         <Dropdown text="Équipements">
