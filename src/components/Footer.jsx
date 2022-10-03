@@ -6,8 +6,8 @@ import '../styles/Footer.css'
 function Footer(){
     return(
         <div className='footer-container'>
-             <img src={logof} alt="logo black"></img>
-             <img src={logof2} alt="copyright"></img>
+             <img className='logof' src={logof} alt="logo black"></img>
+             <p className='copyright'>© 2020 Kasa. All rights reserved</p>
         </div>
     )
 

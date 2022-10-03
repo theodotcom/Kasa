@@ -6,6 +6,8 @@ import data from '../datas/listings.json'
 import React, { useEffect, useState } from 'react'
 import Dropdown from '../components/Dropdown'
 import Star from '../components/Rate'
+import '../styles/Dropdowns.css'
+import '../styles/ListingDetails.css'
 
 function ListingDetails() {
   const { id } = useParams()
@@ -27,8 +29,6 @@ function ListingDetails() {
   if (listing === null) {
     return null
   }
-  console.log(listing.rating)
-
   const pictures = listing.pictures.map((picture, index) => (
     <img src={picture} alt="" key={index} />
   ))
@@ -39,26 +39,26 @@ function ListingDetails() {
       <section className="carousel-section">
         <Carousel>{pictures}</Carousel>
       </section>
-      <section>
+      <section className="listing-infos">
         <div className="listing-content">
           <h1 className="listing-title"> {listing.title}</h1>
           <h2 className="listing-location"> {listing.location}</h2>
+          <div className="tags">{listing.tags}</div>
         </div>
         <div className="listing-content-right">
           <h2 className="listing-owner-name">{listing.host.name}</h2>
           <img src={listing.host.picture} alt="host pic" />
+          <section className="ratings">
+            <span>
+              <Star rating={listing.rating} />
+            </span>
+          </section>
         </div>
-        <div className="tags">{listing.tags}</div>
-      </section>
-      <section className="ratings">
-        <span>
-          {[1, 2, 3, 4, 5].map((value) => (
-            <Star key={value} filled={value <= listing.rating} />
-          ))}
-        </span>
       </section>
       <section className="dropdown-section">
-        <Dropdown text="Description">{listing.description}</Dropdown>
+        <Dropdown text="Description" open={true}>
+          {listing.description}
+        </Dropdown>
         <Dropdown text="Équipements">
           <ul>
             {listing.equipments.map((equipment, index) => (

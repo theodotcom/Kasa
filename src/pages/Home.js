@@ -14,8 +14,8 @@ function Home() {
 
   return (
     <div>
-      <Banner />
       <Header />
+      <Banner />
       <section className="listings">
         {listings.map((listing) => (
           <Listing listing={listing} key={listing.id} />
