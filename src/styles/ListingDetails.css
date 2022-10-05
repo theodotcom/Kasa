@@ -7,6 +7,25 @@
         display: flex !important;
         justify-content: flex-start !important;
     }
+
+    .listing-content-right{
+        flex-direction: row-reverse !important;
+    align-items: center !important;
+    display: flex !important;
+    }
+
+    .ratings span{
+        width: 145px !important;
+    }
+
+    .ratings span svg {
+        width: 16px !important;
+     
+    }
+
+    .tags ul li {
+        margin-bottom: 6px !important;
+    }
         }
 
 
