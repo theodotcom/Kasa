@@ -1,0 +1,27 @@
+.error-container{
+    color: #ff6060;
+}
+
+.error-body{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: space-around;
+    align-items: center;
+    padding: 40px;
+}
+
+.error-logo{
+    font-size: 244px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.error-message{
+    font-size: 23px;
+}
+
+.error-body a{
+    text-decoration: none;
+    color: #ff6060;
+}

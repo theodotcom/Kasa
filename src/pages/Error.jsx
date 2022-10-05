@@ -1,5 +1,6 @@
 import Header from "../components/Header"
 import ErrorBody from "../components/ErrorBody"
+import '../styles/Error.css'
 
 function Error (){
 return (
