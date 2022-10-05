@@ -5,6 +5,7 @@ import Dropdown from "../components/Dropdown"
 import React from 'react'
 import '../styles/Dropdowns.css'
 import '../styles/Apropos.css'
+import banner2 from '../assets/Background.png'
 
 function Apropos(){
 
@@ -12,7 +13,9 @@ function Apropos(){
     <div>
         <Header />
         <div className="container-dropdown">
-        <Banner />
+        <section className="kasa-banner">
+        <img src={banner2} alt="kasa" className="kasa-img" />
+    </section>
         <div className="container-dropdown2">
         <Dropdown text="Fiabilite"open={true}>Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes.</Dropdown>
         <Dropdown text="Respect"open={true}>La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.</Dropdown>
