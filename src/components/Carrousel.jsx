@@ -7,6 +7,8 @@ const Carousel = ({ children }) => {
   const [activeIndex, setActiveIndex] = useState(0)
   const [paused, setPaused] = useState(false)
 
+  const carouselWidth = window.innerWidth > 1000 ? 1000 : window.innerWidth
+
   const updateIndex = (newIndex) => {
     if (newIndex < 0) {
       newIndex = React.Children.count(children) - 1
@@ -40,15 +42,18 @@ const Carousel = ({ children }) => {
     <div
       {...handlers}
       className="carousel"
+      style={{
+        width: carouselWidth,
+      }}
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
       <div
         className="inner"
-        style={{ transform: `translateX(-${activeIndex * 1000}px)` }}
+        style={{ transform: `translateX(-${activeIndex * carouselWidth}px)` }}
       >
         {React.Children.map(children, (child, index) => {
-          return React.cloneElement(child, { width: '1000px' })
+          return React.cloneElement(child, { width: `${carouselWidth}px` })
         })}
       </div>
       {children.length > 1 ? (

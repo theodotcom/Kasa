@@ -1,4 +1,4 @@
-.listings{
+.listings {
     background: #f7f7f7;
     border-radius: 25px;
     justify-content: space-evenly;
@@ -9,32 +9,33 @@
     row-gap: 20px;
 }
 
-.card{
+.card {
     height: 340px;
     width: 340px;
     background: #ff6060;
     border-radius: 10px;
     color: #fff;
-    font-family: Montserrat,sans-serif;
+    font-family: Montserrat, sans-serif;
     font-style: normal;
     font-weight: 500;
- 
+
     overflow: hidden;
     position: relative;
     text-decoration: none;
     top: 0;
 }
 
-.card img{
+.card img {
     height: 100%;
     object-fit: cover;
     width: 100%;
 }
 
-.card h2{
+.card h2 {
     margin-left: 10px;
-   margin-top: 290px;
-   font-size: 18px;
-   font-family: Montserrat,sans-serif;
+    margin-top: 290px;
+    font-size: 18px;
+    font-family: Montserrat, sans-serif;
+    position: absolute;
+    bottom: 0;
 }
-
