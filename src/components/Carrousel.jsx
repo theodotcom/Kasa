@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useSwipeable } from 'react-swipeable'
+import { ReactComponent as Arrow } from '../assets/prev.svg'
 import '../styles/Carousel.css'
 
 const Carousel = ({ children }) => {
@@ -44,28 +45,28 @@ const Carousel = ({ children }) => {
     >
       <div
         className="inner"
-        style={{ transform: `translateX(-${activeIndex * 100}%)` }}
+        style={{ transform: `translateX(-${activeIndex * 1000}px)` }}
       >
         {React.Children.map(children, (child, index) => {
-          return React.cloneElement(child, { width: '100%' })
+          return React.cloneElement(child, { width: '1000px' })
         })}
       </div>
       {children.length > 1 ? (
         <div className="indicators">
-          <button
+          <button className='prev'
             onClick={() => {
               updateIndex(activeIndex - 1)
             }}
           >
-            Prev
+          <Arrow/>
           </button>
 
-          <button
+          <button className='next'
             onClick={() => {
               updateIndex(activeIndex + 1)
             }}
           >
-            Next
+           <Arrow/>
           </button>
         </div>
       ) : (

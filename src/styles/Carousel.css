@@ -1,10 +1,9 @@
-.carousel-section{
-
-}
-
-
 .carousel {
+  display: flex;
     overflow: hidden;
+    width: 1000px;
+    margin-right: auto;
+    margin-left: auto;
    
 }
   
@@ -15,7 +14,9 @@
   }
 
   .inner img{
- 
+    height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
   }
   
   .carousel-item {
@@ -26,15 +27,34 @@
     color: #fff;
   }
   
-  .indicators {
-    display: flex;
-    justify-content: center;
-  }
   
+  .prev{
+    transform: rotate(90deg);
+    position: absolute;
+    left: 0;
+    
+  }
+  .next{
+    transform: rotate(-90deg);
+    position: absolute;
+    right: 0;
+   
+  }
+
+
+
   .indicators > button {
-    margin: 5px;
+     margin-top: 166px;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(90deg,hsla(0,0%,100%,0),rgba(0,0,0,.5));
   }
   
+  .indicators > button > svg{
+    width: 80px;
+    height: auto;
+  }
+
   .indicators > button.active {
     background-color: green;
     color: #fff;

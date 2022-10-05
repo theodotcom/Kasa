@@ -25,7 +25,14 @@
     top: 0;
 }
 
+.card img{
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
 .card h2{
+    margin-left: 10px;
    margin-top: 290px;
    font-size: 18px;
    font-family: Montserrat,sans-serif;
