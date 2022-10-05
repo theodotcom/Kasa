@@ -1,3 +1,15 @@
+@media only screen and (min-device-width : 220px) and (max-device-width : 480px) {
+    .listing-infos{
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    .listing-container{
+        display: flex !important;
+        justify-content: flex-start !important;
+    }
+        }
+
+
 .container-bottom{
     padding: 47px;
 }

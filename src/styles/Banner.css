@@ -1,6 +1,17 @@
+@media only screen and (min-device-width : 220px) and (max-device-width : 480px) {
+   .kasa-banner{
+    height: 127px;
+    font-size: 29px;
+   }
+
+   .kasa-banner h1{
+    font-size: 29px !important;
+   }
+       }
+
 .kasa-banner{
     border-radius: 25px;
-    font-size: 48px;
+    font-size: max(48px);
     justify-content: center;
     /* margin: 0 0 40px; */
     align-items: center;

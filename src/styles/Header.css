@@ -4,6 +4,30 @@
     justify-content: space-between;
 }
 
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 220px) and (max-device-width : 480px) {
+ .navigation{
+    padding: 4px;
+ }
+
+.navbar{
+display: inline-flex;}
+
+.navbar a{
+    margin-left: 15px;
+ }
+
+ .navigation nav{
+    font-size: 15px !important;
+    margin-left: -50px;
+ }
+
+ .logo img{
+    width: 74%;
+ }
+
+    }
+
 .navigation nav{
     color: #ff6060;
     font-family: Montserrat,sans-serif;
